@@ -532,7 +532,7 @@ main table tbody tr:last-child td {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
-    animation: showMenu 400ms ease forwards;
+    animation: showMenu 275ms ease forwards;
   }
 
   @keyframes showMenu {
