@@ -60,6 +60,10 @@ body {
   overflow-x: hidden;
   color: var(--color-dark);
 }
+body.fixed-scroll {
+  position: fixed;
+  overflow-y: scroll;
+}
 
 .container {
   display: grid;
@@ -531,14 +535,29 @@ main table tbody tr:last-child td {
     box-shadow: 1rem 3rem 4rem var(--color-light);
     height: 100vh;
     padding-right: var(--card-padding);
-    display: none;
-    animation: showMenu 275ms ease forwards;
+    display: block;
+    transition: left 0.275s ease;
   }
-
-  @keyframes showMenu {
-    to {
-      left: 0;
-    }
+  .show-menu aside {
+    left: 0;
+  }
+  .aside-overview {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: left 0.4s ease;
+  }
+  .show-menu .aside-overview {
+    display: block;
+    opacity: 0.25;
   }
 
   aside .logo {
