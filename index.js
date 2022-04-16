@@ -2,13 +2,21 @@ const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#btn-menu");
 const closeBtn = document.querySelector("#btn-close");
 const themeThoggler = document.querySelector(".theme-toggler");
+const asideOverview = document.querySelector(".aside-overview");
 
+const toggleMenu = () => {
+  document.body.classList.toggle("show-menu");
+  document.body.classList.toggle("fixed-scroll");
+};
 menuBtn.addEventListener("click", () => {
-  sideMenu.style.display = "block";
+  toggleMenu();
 });
 
 closeBtn.addEventListener("click", () => {
-  sideMenu.style.display = "none";
+  toggleMenu();
+});
+asideOverview.addEventListener("click", () => {
+  toggleMenu();
 });
 
 themeThoggler.addEventListener("click", () => {
