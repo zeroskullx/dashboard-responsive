@@ -555,7 +555,7 @@ main table tbody tr:last-child td {
     left: 0;
     right: 0;
     z-index: 2;
-    transition: left 0.4s ease;
+    transition: left 0.42s ease;
   }
   .show-menu .aside-overview {
     display: block;
